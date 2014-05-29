@@ -1,4 +1,5 @@
-if not %w(etch lenny lucid precise sid squeeze wheezy).include? node['postgresql']['pgdg']['release_apt_codename']
+#List of supported OS https://wiki.postgresql.org/wiki/Apt#PostgreSQL_packages_for_Debian_and_Ubuntu
+if not %w(etch lenny lucid precise sid squeeze wheezy saucy trusty).include? node['postgresql']['pgdg']['release_apt_codename']
   raise "Not supported release by PGDG apt repository"
 end
 
